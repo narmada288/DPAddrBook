@@ -1,0 +1,23 @@
+create database with name farm, username: app, password: app
+
+drop table farminfo;
+
+CREATE TABLE farminfo
+(
+	ID INT NOT NULL GENERATED ALWAYS AS IDENTITY,
+	FarmName VARCHAR (15) NOT NULL,
+	ContactName VARCHAR (30) NOT NULL,
+	ContactNumber VARCHAR (30) NOT NULL,
+	PlotNumber VARCHAR (15) NOT NULL,
+        StreetName VARCHAR (15) NOT NULL,
+        Village VARCHAR (15) NOT NULL,
+	StateName VARCHAR (30) NOT NULL,
+	PostCode VARCHAR (30) NOT NULL,
+	DateOfRegistration date NOT NULL
+        
+
+);
+INSERT INTO farminfo (FarmName,ContactName,ContactNumber,PlotNumber,StreetName,Village,StateName,PostCode,DateOfRegistration)
+	VALUES ('GREEN','Mark','123456','21','ann','logan','QLD','4000','07-01-2012'),
+	('BLACK','Jack','123444','41','Queen','sunnybank','QLD','4060','08-01-2012'),
+('YELLOW','Ryan','123244','23','Orr','dexter','NSW','3211','08-12-2013');
